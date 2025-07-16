@@ -1,0 +1,164 @@
+.SettingsMainContainer {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.SettingsContentContainer {
+    position: relative;
+    display: flex;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    align-items: center;
+    flex-direction: column;
+}
+
+.SettingsPanelContainer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-color: #00000047;
+    border-radius: 8px;
+    border-style: solid;
+    border-width: 2px;
+    background-color: #00000047;
+    margin: 5px;
+    padding: 10px;
+    max-width: 500px;
+}
+
+.SettingsPanelCheckbox {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.SettingsPanelSaveButton {
+    width: 200px;
+    height: 50px;
+    display: flex;
+    margin: 60px auto;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 7px;
+    border: 2px solid #0000004a;
+    font-size: 15px;
+    transition: background-color .5s ease-in-out;
+    transition: opacity .5s ease-in-out;
+
+    &:hover {
+        opacity: 0.4;
+    }
+}
+
+.ConfirmBackground {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #0000009c;
+    backdrop-filter: blur(20px);
+    z-index: 6000;
+}
+
+.ConfirmComponent {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: space-evenly;
+    align-items: center;
+    width: 350px;
+    height: 300px;
+    background-color: #00000059;
+    border-radius: 7px;
+}
+
+.ConfirmWarning {
+    &__text {
+        margin: 0;
+        text-align: center;
+        font-size: 20px;
+    }
+}
+
+.ConfirmButtons {
+    &__component {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    &__button {
+        width: 40%;
+        height: 45px;
+        cursor: pointer;
+        border-radius: 7px;
+        border-color: transparent;
+        transition: opacity .5s ease-in-out;
+
+        &:hover {
+            opacity: 0.4;
+        }
+    }
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"]+label {
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+input[type="checkbox"]+label:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    border: 2px solid #0000004a;
+    border-radius: 5px;
+    background: #00000030;
+}
+
+// input[type="checkbox"]:checked+label:before {
+//     background: #007bff;
+//     border-color: #007bff;
+//     border-radius: 5px;
+//     border: 2px solid #0000004a;
+// }
+
+// input[type="checkbox"]:checked+label:after {
+//     content: "";
+//     position: absolute;
+//     left: 0;
+//     top: 50%;
+//     transform: translateY(-50%);
+//     width: 18px;
+//     height: 18px;
+//     border: 2px solid #0000004a;
+//     border-radius: 5px;
+//     background: #00000030;
+// }
